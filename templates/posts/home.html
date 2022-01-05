@@ -1,0 +1,17 @@
+{% extends '../base.html' %}
+
+  {% block title %}
+        Posts Home
+ {% endblock title %}
+
+ {% block content %}
+
+   <center>
+      <h2>Message Board HomePage</h2>
+      <ul>
+        {% for post in all_posts %}      
+            <li>{{post.id }}. {{ post.text}}</li>
+        {% endfor %}
+        </ul>
+   </center>
+  {% endblock content %}
